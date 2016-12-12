@@ -16,7 +16,7 @@ The project contains the following files :
 
 ##Run the script
 
-The makeTidyDataSet.R contains only one function "makeTidyData(unzipData=TRUE)"
+The runAnalysis.R contains only one function "makeTidyData(unzipData=TRUE)"
   
     _unzipdata_ : indicate if we want to unzip the file (by default) or skip this process to save time if we re-run the function.
 
