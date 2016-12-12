@@ -5,9 +5,9 @@ The project consists of merging test and training sets of data coming from an ex
 
 The project contains the following files :
 
-1. Readme.md
-2. CodeBook.md : explains how to run the scripts that loads and transforms the data
-3. makeTidyDataSet.R : script to execute
+1. Readme.md : explains the analysis done
+2. CodeBook.pdf : explains how to run the scripts that loads and transforms the data
+3. run_Analysis.R : script to execute
 4. FUCI_HAR_Dataset.zip : source data
 5. MergedData.txt : file containing the merged data
   * Contains only the measures from X_test and X_train files that are a mean or a standard deviation (ie. the feature names containing _-mean_ or _-std_ text)
