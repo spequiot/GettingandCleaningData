@@ -11,7 +11,7 @@ The project contains the following files :
 4. FUCI_HAR_Dataset.zip : source data
 5. MergedData.txt : file containing the merged data
   * Contains only the measures from X_test and X_train files that are a mean or a standard deviation (ie. the feature names containing _-mean_ or _-std_ text)
-6. SummaryzedData : file containing the summarized data
+6. SummaryzedData.txt : file containing the summarized data
   * Contains the mean of each MergedData.txt dataset measurements, group by activity and subject
 
 ##Run the script
@@ -23,6 +23,17 @@ The makeTidyDataSet.R contains only one function "makeTidyData(unzipData=TRUE)"
 
 * The FUCI_HAR_Dataset.zip must be in the R working directory
 * The script unzip the file in the same directory, unless you set the optional parameter unzipData=FALSE, that allow to avoid unzip the file again if already done
+* Test and training merge steps are:
+ * loading all the files
+    * features.txt is used to name columns when loading X_test/train files
+    * Files in _inertial signal_ folder are not used
+ * subject_test/train, X_test/train and Y_test/train datasets columns are binded (using cbind)
+ * Y_test/train are merged with activity_label to have the activity names column
+ * the 2 resulting datasets (test and train) rows are binded (using rbind)
+ * the columns are renamed to be explicit
+* Summarized data steps are:
+ * melting the merged dataset by activityName and subjectId
+ * apply a dcast with mean function
 * The script output 2 files using write.table function
   * MergedData.txt
   * SummeryzedData.txt
