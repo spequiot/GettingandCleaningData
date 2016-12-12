@@ -10,7 +10,9 @@ The project contains the following files :
 3. makeTidyDataSet.R : script to execute
 4. FUCI_HAR_Dataset.zip : source data
 5. MergedData.txt : file containing the merged data
+  * Contains only the measures from X_test and X_train files that are a mean or a standard deviation (ie. the feature names containing _-mean_ or _-std_ text)
 6. SummaryzedData : file containing the summarized data
+  * Contains the mean of each MergedData.txt dataset measurements, group by activity and subject
 
 ##Run the script
 
